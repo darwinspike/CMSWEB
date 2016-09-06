@@ -1,0 +1,553 @@
+﻿@{
+    ViewBag.Title = "Calculator6";
+}
+    <section class="ui-widget-content calc pure-g-r" id="calcConsolidating" style="text-align: center;">
+        <section class="pure-u-1 left">
+            <section class="inner">
+                <section style="display: block; border-radius: 4px; background-color: #f3f3f3; padding: 20px; margin-bottom: 20px">
+                    Use our calculator to see how much you can save (please do not include any dollar signs or commas).
+                </section>
+                <h1>Your Current Debt Arrangement</h1>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        # of Payments
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Interest Rate
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Loan Amount 
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Monthly Payment
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Total Interest
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-6 center hidden-phone">
+                    <aside class="innerx">
+                    </aside>
+                </aside>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #1</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input name="payments" class="style9 pure-u-1" id="payments" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input name="interest" class="style9 pure-u-1" id="interest" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input name="principal" class="style9 pure-u-1" id="principal" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input name="payment" class="style9 pure-u-1" id="payment" onchange="calculateForm($(this).parents('.form'));" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input name="totalint" class="style9 pure-u-1" id="totalint" onchange="calculateForm($(this).parents('.form')):" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button2">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #2</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input name="payments" class="style9 pure-u-1" id="Text1" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input name="interest" class="style9 pure-u-1" id="Text2" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input name="principal" class="style9 pure-u-1" id="Text3" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input name="payment" class="style9 pure-u-1" id="Text4" onchange="calculateForm($(this).parents('.form'))" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input name="totalint" class="style9 pure-u-1" id="Text5" onchange="calculateForm($(this).parents('.form'))" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button3">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #3</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input id="Text6" class="style9 pure-u-1" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7" name="payments">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text7" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text8" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input name="payment" class="style9 pure-u-1" id="Text9" onchange="calculateForm($(this).parents('.form'))" size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text10" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="totalint">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button4">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #4</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input name="payments" class="style9 pure-u-1" id="Text11" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text12" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text13" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text14" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="payment">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text15" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="totalint">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button5">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #5</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input name="payments" class="style9 pure-u-1" id="Text16" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text17" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text18" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text19" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="payment">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text20" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="totalint">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button6">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #6</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input name="payments" class="style9 pure-u-1" id="Text21" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text22" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text23" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text24" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="payment">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text25" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="totalint">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button7">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #7</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input name="payments" class="style9 pure-u-1" id="Text26" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text27" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text28" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text29" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="payment">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text30" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="totalint">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button8">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #8</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input id="Text31" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7" name="payments" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text32" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text33" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text34" onchange="calculateForm($(this).parents('.form'))" size="7" name="payment" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text35" onchange="calculateForm($(this).parents('.form'))" size="7" name="totalint" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button9">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #9</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input id="Text36" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7" name="payments" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text37" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text38" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text39" onchange="calculateForm($(this).parents('.form'))" size="7" name="payment" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text40" onchange="calculateForm($(this).parents('.form'))" size="7" name="totalint" class="style9 pure-u-1">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button10">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <h2>Debt #10</h2>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input id="Text41" class="style9 pure-u-1" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7" name="payments">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text42" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Loan Amount</aside>
+                            <input id="Text43" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text44" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="payment">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text45" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="totalint">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button11">
+                        </aside>
+                    </aside>
+                </section>
+                <h1>Compare Your Savings with a Consolidation Loan</h1>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        # of Payments
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Interest Rate
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Total Debt
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Monthly Payment
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-8 center hidden-phone">
+                    <aside class="innerx">
+                        Total Interest
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-6 center hidden-phone">
+                    <aside class="innerx">
+                    </aside>
+                </aside>
+                <section class="form">
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            Consolidation Loan
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone"># of Payments</aside>
+                            <input id="Text46" class="style9 pure-u-1" onchange="if (checkInput(this, 1, 480, '# of payments')) calculateForm($(this).parents('.form')); " size="7" name="payments">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Interest Rate</aside>
+                            <input id="Text47" class="style9 pure-u-1" onchange="if (checkInput(this, .001, 99, 'Interest')) calculateForm($(this).parents('.form')) ;" size="7" name="interest">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Debt</aside>
+                            <input id="Text48" class="style9 pure-u-1" onchange="if (checkInput(this, 100, 10000000, 'Principal')) calculateForm($(this).parents('.form'));" size="7" name="principal">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Monthly Payment</aside>
+                            <input id="Text49" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="payment">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-8 center">
+                        <aside class="innerx">
+                            <aside class="visible-phone">Total Interest</aside>
+                            <input id="Text50" onchange="calculateForm($(this).parents('.form'))" class="style9 pure-u-1" size="7" name="totalint">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-6 center">
+                        <aside class="innerx">
+                            <input class="Calc_Button" onclick="calculateForm($(this).parents('.form'))" type="button" value="Compute" name="button">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="pure-u-1" style="background-color: #f3f3f3; border-radius: 4px; margin-top: 30px">
+                    <section class="inner">
+                        <section style="text-align: justify">
+                            <strong>DISCLAIMER:</strong>
+                            The prequalification figures above are based upon conventional program guidelines. 
+                        Other loan programs are available. Calculations by this tool are believed to be accurate, 
+                        yet are not guaranteed. Further review is necessary to obtain an exact qualification. 
+                        If you have less than 20% equity in your home, a monthly mortgage insurance payment may be required. 
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>

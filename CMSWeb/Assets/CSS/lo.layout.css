@@ -1,0 +1,1054 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:700,400");
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+    audio:not([controls]) {
+        display: none;
+        height: 0;
+    }
+
+[hidden] {
+    display: none;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html, button, input, select, textarea {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: .83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: .83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: .75em;
+    margin: 2.33em 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+p, pre {
+    margin: 1em 0;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace,serif;
+    _font-family: 'courier new',monospace;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+    quotes: none;
+}
+
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+small {
+    font-size: 75%;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+dl, menu, ol, ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+menu, ol, ul {
+    padding: 0 0 0 40px;
+}
+
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button, input {
+    line-height: normal;
+}
+
+    button, html input[type="button"], input[type="reset"], input[type="submit"] {
+        -webkit-appearance: button;
+        cursor: pointer;
+        *overflow: visible;
+    }
+
+        button[disabled], input[disabled] {
+            cursor: default;
+        }
+
+    input[type="checkbox"], input[type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+        *height: 13px;
+        *width: 13px;
+    }
+
+    input[type="search"] {
+        -webkit-appearance: textfield;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+        input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+    button::-moz-focus-inner, input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Chosen v1.1.0 | (c) 2011-2013 by Harvest | MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md */
+.chosen-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    zoom: 1;
+    *display: inline;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+    .chosen-container .chosen-drop {
+        position: absolute;
+        top: 100%;
+        left: -9999px;
+        z-index: 1010;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #aaa;
+        border-top: 0;
+        background: #fff;
+        box-shadow: 0 4px 5px rgba(0,0,0,.15);
+    }
+
+    .chosen-container.chosen-with-drop .chosen-drop {
+        left: 0;
+    }
+
+    .chosen-container a {
+        cursor: pointer;
+    }
+
+.chosen-container-single .chosen-single {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0 0 0 8px;
+    height: 35px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: #fff;
+    background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#fff),color-stop(50%,#f6f6f6),color-stop(52%,#eee),color-stop(100%,#f4f4f4));
+    background: -webkit-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background: -moz-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background: -o-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background: linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+    background-clip: padding-box;
+    box-shadow: 0 0 3px #fff inset,0 1px 1px rgba(0,0,0,.1);
+    color: #444;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 24px;
+}
+
+.chosen-container-single .chosen-default {
+    color: #999;
+}
+
+.chosen-container-single .chosen-single span {
+    display: block;
+    overflow: hidden;
+    margin-right: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chosen-container-single .chosen-single-with-deselect span {
+    margin-right: 38px;
+}
+
+.chosen-container-single .chosen-single abbr {
+    position: absolute;
+    top: 6px;
+    right: 26px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite.png) -42px 1px no-repeat;
+    font-size: 1px;
+}
+
+    .chosen-container-single .chosen-single abbr:hover {
+        background-position: -42px -10px;
+    }
+
+.chosen-container-single.chosen-disabled .chosen-single abbr:hover {
+    background-position: -42px -10px;
+}
+
+.chosen-container-single .chosen-single div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 18px;
+    height: 100%;
+}
+
+    .chosen-container-single .chosen-single div b {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite.png) no-repeat 0 2px;
+    }
+
+.chosen-container-single .chosen-search {
+    position: relative;
+    z-index: 1010;
+    margin: 0;
+    padding: 3px 4px;
+    white-space: nowrap;
+}
+
+    .chosen-container-single .chosen-search input[type=text] {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 1px 0;
+        padding: 4px 20px 4px 5px;
+        width: 100%;
+        height: auto;
+        outline: 0;
+        border: 1px solid #aaa;
+        background: #fff url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite.png) no-repeat 100% -20px;
+        background: url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite.png) no-repeat 100% -20px;
+        font-size: 1em;
+        font-family: sans-serif;
+        line-height: normal;
+        border-radius: 0;
+    }
+
+.chosen-container-single .chosen-drop {
+    margin-top: -1px;
+    border-radius: 0 0 4px 4px;
+    background-clip: padding-box;
+}
+
+.chosen-container-single.chosen-container-single-nosearch .chosen-search {
+    position: absolute;
+    left: -9999px;
+}
+
+.chosen-container .chosen-results {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 4px 4px 0;
+    padding: 0 0 0 4px;
+    max-height: 240px;
+    -webkit-overflow-scrolling: touch;
+}
+
+    .chosen-container .chosen-results li {
+        display: none;
+        margin: 0;
+        padding: 5px 6px;
+        list-style: none;
+        line-height: 15px;
+        -webkit-touch-callout: none;
+    }
+
+        .chosen-container .chosen-results li.active-result {
+            display: list-item;
+            cursor: pointer;
+        }
+
+        .chosen-container .chosen-results li.disabled-result {
+            display: list-item;
+            color: #ccc;
+            cursor: default;
+        }
+
+        .chosen-container .chosen-results li.highlighted {
+            background-color: #3875d7;
+            background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#3875d7),color-stop(90%,#2a62bc));
+            background-image: -webkit-linear-gradient(#3875d7 20%,#2a62bc 90%);
+            background-image: -moz-linear-gradient(#3875d7 20%,#2a62bc 90%);
+            background-image: -o-linear-gradient(#3875d7 20%,#2a62bc 90%);
+            background-image: linear-gradient(#3875d7 20%,#2a62bc 90%);
+            color: #fff;
+        }
+
+        .chosen-container .chosen-results li.no-results {
+            display: list-item;
+            background: #f4f4f4;
+        }
+
+        .chosen-container .chosen-results li.group-result {
+            display: list-item;
+            font-weight: 700;
+            cursor: default;
+        }
+
+        .chosen-container .chosen-results li.group-option {
+            padding-left: 15px;
+        }
+
+        .chosen-container .chosen-results li em {
+            font-style: normal;
+            text-decoration: underline;
+        }
+
+.chosen-container-multi .chosen-choices {
+    position: relative;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto!important;
+    height: 1%;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(1%,#eee),color-stop(15%,#fff));
+    background-image: -webkit-linear-gradient(#eee 1%,#fff 15%);
+    background-image: -moz-linear-gradient(#eee 1%,#fff 15%);
+    background-image: -o-linear-gradient(#eee 1%,#fff 15%);
+    background-image: linear-gradient(#eee 1%,#fff 15%);
+    cursor: text;
+}
+
+    .chosen-container-multi .chosen-choices li {
+        float: left;
+        list-style: none;
+    }
+
+        .chosen-container-multi .chosen-choices li.search-field {
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+        }
+
+            .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+                margin: 1px 0;
+                padding: 5px;
+                height: 15px;
+                outline: 0;
+                border: 0!important;
+                background: transparent!important;
+                box-shadow: none;
+                color: #666;
+                font-size: 100%;
+                font-family: sans-serif;
+                line-height: normal;
+                border-radius: 0;
+            }
+
+            .chosen-container-multi .chosen-choices li.search-field .default {
+                color: #999;
+            }
+
+        .chosen-container-multi .chosen-choices li.search-choice {
+            position: relative;
+            margin: 3px 0 3px 5px;
+            padding: 3px 20px 3px 5px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            background-color: #e4e4e4;
+            background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#f4f4f4),color-stop(50%,#f0f0f0),color-stop(52%,#e8e8e8),color-stop(100%,#eee));
+            background-image: -webkit-linear-gradient(#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            background-image: -moz-linear-gradient(#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            background-image: -o-linear-gradient(#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            background-image: linear-gradient(#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            background-clip: padding-box;
+            box-shadow: 0 0 2px #fff inset,0 1px 0 rgba(0,0,0,.05);
+            color: #333;
+            line-height: 13px;
+            cursor: default;
+        }
+
+            .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+                position: absolute;
+                top: 4px;
+                right: 3px;
+                display: block;
+                width: 12px;
+                height: 12px;
+                background: url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite.png) -42px 1px no-repeat;
+                font-size: 1px;
+            }
+
+                .chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover {
+                    background-position: -42px -10px;
+                }
+
+        .chosen-container-multi .chosen-choices li.search-choice-disabled {
+            padding-right: 5px;
+            border: 1px solid #ccc;
+            background-color: #e4e4e4;
+            background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#f4f4f4),color-stop(50%,#f0f0f0),color-stop(52%,#e8e8e8),color-stop(100%,#eee));
+            background-image: -webkit-linear-gradient(top,#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            background-image: -moz-linear-gradient(top,#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            background-image: -o-linear-gradient(top,#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            background-image: linear-gradient(top,#f4f4f4 20%,#f0f0f0 50%,#e8e8e8 52%,#eee 100%);
+            color: #666;
+        }
+
+        .chosen-container-multi .chosen-choices li.search-choice-focus {
+            background: #d4d4d4;
+        }
+
+            .chosen-container-multi .chosen-choices li.search-choice-focus .search-choice-close {
+                background-position: -42px -10px;
+            }
+
+.chosen-container-multi .chosen-results {
+    margin: 0;
+    padding: 0;
+}
+
+.chosen-container-multi .chosen-drop .result-selected {
+    display: list-item;
+    color: #ccc;
+    cursor: default;
+}
+
+.chosen-container-active .chosen-single {
+    border: 1px solid #5897fb;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+    border: 1px solid #aaa;
+    -moz-border-radius-bottomright: 0;
+    border-bottom-right-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-left-radius: 0;
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#eee),color-stop(80%,#fff));
+    background-image: -webkit-linear-gradient(#eee 20%,#fff 80%);
+    background-image: -moz-linear-gradient(#eee 20%,#fff 80%);
+    background-image: -o-linear-gradient(#eee 20%,#fff 80%);
+    background-image: linear-gradient(#eee 20%,#fff 80%);
+    box-shadow: 0 1px 0 #fff inset;
+}
+
+    .chosen-container-active.chosen-with-drop .chosen-single div {
+        border-left: 0;
+        background: transparent;
+    }
+
+        .chosen-container-active.chosen-with-drop .chosen-single div b {
+            background-position: -18px 2px;
+        }
+
+.chosen-container-active .chosen-choices {
+    border: 1px solid #5897fb;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+    .chosen-container-active .chosen-choices li.search-field input[type=text] {
+        color: #111!important;
+    }
+
+.chosen-disabled {
+    opacity: .5!important;
+    cursor: default;
+}
+
+    .chosen-disabled .chosen-single {
+        cursor: default;
+    }
+
+    .chosen-disabled .chosen-choices .search-choice .search-choice-close {
+        cursor: default;
+    }
+
+.chosen-rtl {
+    text-align: right;
+}
+
+    .chosen-rtl .chosen-single {
+        overflow: visible;
+        padding: 0 8px 0 0;
+    }
+
+        .chosen-rtl .chosen-single span {
+            margin-right: 0;
+            margin-left: 26px;
+            direction: rtl;
+        }
+
+    .chosen-rtl .chosen-single-with-deselect span {
+        margin-left: 38px;
+    }
+
+    .chosen-rtl .chosen-single div {
+        right: auto;
+        left: 3px;
+    }
+
+    .chosen-rtl .chosen-single abbr {
+        right: auto;
+        left: 26px;
+    }
+
+    .chosen-rtl .chosen-choices li {
+        float: right;
+    }
+
+        .chosen-rtl .chosen-choices li.search-field input[type=text] {
+            direction: rtl;
+        }
+
+        .chosen-rtl .chosen-choices li.search-choice {
+            margin: 3px 5px 3px 0;
+            padding: 3px 5px 3px 19px;
+        }
+
+            .chosen-rtl .chosen-choices li.search-choice .search-choice-close {
+                right: auto;
+                left: 4px;
+            }
+
+    .chosen-rtl.chosen-container-single-nosearch .chosen-search, .chosen-rtl .chosen-drop {
+        left: 9999px;
+    }
+
+    .chosen-rtl.chosen-container-single .chosen-results {
+        margin: 0 0 4px 4px;
+        padding: 0 4px 0 0;
+    }
+
+    .chosen-rtl .chosen-results li.group-option {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .chosen-rtl.chosen-container-active.chosen-with-drop .chosen-single div {
+        border-right: 0;
+    }
+
+    .chosen-rtl .chosen-search input[type=text] {
+        padding: 4px 5px 4px 20px;
+        background: #fff url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite.png) no-repeat -30px -20px;
+        background: url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite.png) no-repeat -30px -20px;
+        direction: rtl;
+    }
+
+    .chosen-rtl.chosen-container-single .chosen-single div b {
+        background-position: 6px 2px;
+    }
+
+    .chosen-rtl.chosen-container-single.chosen-with-drop .chosen-single div b {
+        background-position: -12px 2px;
+    }
+
+@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-resolution:144dpi) {
+    .chosen-rtl .chosen-search input[type=text], .chosen-container-single .chosen-single abbr, .chosen-container-single .chosen-single div b, .chosen-container-single .chosen-search input[type=text], .chosen-container-multi .chosen-choices .search-choice .search-choice-close, .chosen-container .chosen-results-scroll-down span, .chosen-container .chosen-results-scroll-up span {
+        background-image: url(../../../../UserControl/MortgageCEO_Forms/Images/chosen-sprite@2x.png)!important;
+        background-size: 52px 37px!important;
+        background-repeat: no-repeat!important;
+    }
+}
+
+.lo-container, .lo-container * {
+    font-family: "Open Sans", sans-serif, arial;
+}
+
+.lo-container {
+    margin-top: 20px;
+}
+
+.chosen-container-single .chosen-single {
+    background: #FFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 0px;
+    padding: 5px 0 5px 8px;
+    box-shadow: none;
+}
+
+
+.chosen-container-single:hover .chosen-single {
+    background-color: #f5f5f5;
+    border-color: #E9E9E9;
+}
+
+.chosen-container-single.chosen-container-active .chosen-single {
+    border: 1px solid #4D79B9;
+    background-color: #f5f5f5;
+}
+
+.chosen-container-single .chosen-single div {
+    top: 5px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+    border: 1px solid #4D79B9;
+    background: #FAFAFA;
+    box-shadow: none;
+}
+
+.chosen-container .chosen-drop {
+    box-shadow: none;
+    border: 1px solid #4D79B9;
+    background: #FAFAFA;
+    border-top: none;
+    border-radius: 0px;
+}
+
+select + .chosen-container {
+    margin-bottom: 10px;
+}
+
+.clearfix {
+    position: relative;
+    display: block;
+    float: none;
+    clear: both;
+}
+
+
+.lo-container .lo-row, .lo-container .lo-row *[class*="lo-col"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*[class*="lo-col"] {
+    float: left;
+    padding: 0 5px;
+}
+
+.lo-col-1 {
+    width: 8.3333%;
+}
+
+.lo-col-2 {
+    width: 16.6666%;
+}
+
+.lo-col-3 {
+    width: 25%;
+}
+
+.lo-col-4 {
+    width: 33.3333%;
+}
+
+.lo-col-4 {
+    width: 33.3333%;
+}
+
+.lo-col-5 {
+    width: 41.6666%;
+}
+
+.lo-col-6 {
+    width: 50%;
+}
+
+.lo-col-7 {
+    width: 58.3333%;
+}
+
+.lo-col-8 {
+    width: 66.6666%;
+}
+
+.lo-col-9 {
+    width: 75%;
+}
+
+.lo-col-10 {
+    width: 83.3333%;
+}
+
+.lo-col-11 {
+    width: 91.66666%;
+}
+
+.lo-col-12 {
+    width: 100%;
+}
+
+
+
+.lo-container #query {
+    border: 1px solid #E9E9E9;
+    height: 35px;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    float: none;
+    outline: none;
+}
+
+    .lo-container #query:focus {
+        border: 1px solid #4D79B9;
+    }
+
+.lo-officer {
+    opacity: 1;
+    filter: aplha(opacity=100);
+}
+
+    .lo-officer a {
+        color: #A3A3A3;
+        text-decoration: none;
+        font-size: 10pt;
+        line-height: 12pt;
+        display: block;
+        padding: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .lo-officer .lo-img {
+        background-color: #f2f2f2;
+        margin-bottom: 10px;
+        height: 140px;
+        overflow: hidden;
+    }
+
+    .lo-officer img {
+        width: inherit;
+        min-height: 140px;
+        margin: 0 auto 10px auto;
+        display: block;
+        max-width: 90%;
+        min-width: 50px;
+        background-color: #000;
+    }
+
+    .lo-officer a span {
+        color: #444;
+        font-size: 12pt;
+        display: block;
+    }
+
+    .lo-officer:hover a span {
+        color: #69ABE7;
+    }
+
+.lo-results {
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.lo-search span {
+    display: block;
+}
+
+.lo-search input {
+    display: none;
+}
+
+body.search .lo-search input {
+    display: block;
+}
+
+body.search .lo-search span {
+    display: none;
+}
+
+body.viewlo .lo-results {
+    background-color: #eeeeee;
+}
+
+body.viewlo .lo-officer {
+    opacity: 0.60;
+    filter: aplha(opacity=60);
+}
+
+    body.viewlo .lo-officer.active, body.viewlo .lo-officer:hover {
+        opacity: 1;
+        filter: aplha(opacity=100);
+    }
+
+.lo-officer.active a {
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.lo-detailer {
+    padding: 40px 20px;
+    font-size: 10pt;
+    background-color: #FCFCFC;
+    z-index: 1;
+    box-shadow: 0px 0px 3px #DBDBDB;
+    margin: 0 10px;
+    color: #858585;
+}
+
+    .lo-detailer .lo-detailer-head {
+        margin: 10px 0px;
+        padding: 10px 0px;
+        border: 1px solid #E6E6E6;
+        border-left: 0px;
+        border-right: 0px;
+        color: #A0A0A0;
+    }
+
+        .lo-detailer .lo-detailer-head span {
+            display: block;
+            font-size: 12pt;
+            color: #444;
+        }
+
+    .lo-detailer h4 {
+        margin: 10px 0px;
+        font-size: 12pt;
+        padding: 0px;
+        line-height: 12pt;
+    }
+
+    .lo-detailer a {
+        text-decoration: none;
+        color: #4995E7;
+        border-bottom: 1px dotted #D1D1D1;
+    }
+
+    .lo-detailer .lo-detailer-subhead {
+        margin-bottom: 7px;
+        color: #444;
+    }
+
+a[rel="close"] {
+    color: #A8A8A8;
+    text-decoration: none;
+    font-size: 24pt;
+    margin-top: -40px;
+    width: 30pt;
+    text-align: center;
+    margin-right: -20px;
+    height: 30pt;
+    line-height: 30pt;
+    border: none;
+}
+
+    a[rel="close"]:hover, a[rel="close"]:focus {
+        color: #444;
+    }
+
+.lo-detailer *[class*="lo-col-"] {
+    padding: 0 15px;
+}
+
+.lo-pull-right {
+    float: right;
+}
+
+.lo-pull-left {
+    float: left;
+}
+
+.lo-progressbar {
+    background-color: #E0E0E0;
+    min-height: 2px;
+}
+
+.lo-progressbarseek {
+    width: 1px;
+    background-color: #FFA300;
+    height: 2px;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+
+a[rel="moreresults"] {
+    display: block;
+    margin: 10px 10px 0px;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: #FFB27E;
+    border: 2px solid #FFB27E;
+    display: block;
+}
+
+    a[rel="moreresults"]:hover, a[rel="moreresults"]:focus {
+        background-color: #FFB27E;
+        display: block;
+        margin: 10px 10px 0px;
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+        color: #FFF;
+    }
+
+
+@media screen and (max-width: 767px) {
+
+    *[class*="lo-col"] {
+        float: none;
+        width: 100%;
+    }
+
+    .lo-col-xs-6 {
+        width: 50%;
+        float: left;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    *[class*="lo-col"], *[class*="lo-col-xs"] {
+        float: none;
+        width: 100%;
+    }
+
+    .lo-officer img {
+        min-height: 100%;
+    }
+}

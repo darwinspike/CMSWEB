@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Calculator9";
+}
+    <section class="ui-widget-content calc pure-g-r" id="calcInterest" style="text-align: center;">
+        <section class="pure-u-1 left">
+            <section class="inner">
+                <aside class="pure-u-1-3 center-phone center">
+                    <aside class="inner">
+                        Loan Amount:<br>
+                        <input onchange="MyCheckEnteredValue(ioc_amnt); dosumInterest()" size="7" value="100000" name="ioc_amnt" class="pure-u-4-5" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-3 center-phone center">
+                    <aside class="inner">
+                        <strong>Term in Years:</strong><br>
+                        <input onchange="MyCheckEnteredValue(ioc_years); dosumInterest()" size="6" value="30" name="ioc_years" class="pure-u-4-5" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-3 center-phone center">
+                    <aside class="inner">
+                        <strong>Interest Rate:</strong><br>
+                        <input onchange="MyCheckEnteredValue(ioc_rate); dosumInterest()" size="6" value="7.0" name="ioc_rate" class="pure-u-4-5" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-3 center-phone center">
+                    <aside class="inner">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-3 center-phone center">
+                    <aside class="inner">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-3 center-phone center">
+                    <aside class="inner">
+                        <input name="calc_bttn" type="button" class="Calc_Button" onclick="dosumInterest()" value="Calculate" />
+                    </aside>
+                </aside>
+                <section class="pure-u-1" style="border-radius: 4px; background-color: #f3f3f3; margin-top: 20px">
+                    <section class="inner">
+                        <aside class="pure-u-1-2 center-phone center">
+                            <aside class="inner">
+                                Monthly Payment:
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone center">
+                            <aside class="inner">
+                                <input onchange="dosumInterest()" size="6" value="0.0" name="MonthlyPayment" class="pure-u-4-5" />
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone center">
+                            <aside class="inner">
+                                Total of Payments:
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone center">
+                            <aside class="inner">
+                                <input onchange="dosumInterest()" size="6" value="0.0" name="TotalOfPayments" class="pure-u-4-5" />
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone center">
+                            <aside class="inner">
+                                Number of Payments:
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone center">
+                            <aside class="inner">
+                                <input onchange="dosumInterest()" size="6" value="0.0" name="NumberOfPayments" class="pure-u-4-5" />
+                            </aside>
+                        </aside>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>

@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Calculator3";
+}
+    <section class="ui-widget-content calc pure-g-r" id="calcHowMuchPayments" style="text-align: center;">
+        <section class="pure-u-1 left">
+            <section class="inner">
+                <section style="display: block; border-radius: 4px; background-color: #f3f3f3; padding: 20px; margin-bottom: 20px">
+                    <span>Use our mortgage calculator to determine your monthly payment amount. 
+                    Estimate your taxes and insurance so that these amounts will be included in the payment calculation. 
+                    Enter amounts in the fields and the mortgage calculator will give you your monthly mortgage payment amount!
+                    </span>
+                </section>
+                <h1>Mortgage Calculator</h1>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Mortgage Term
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="YR" class="style9" onchange="if (MyCheckEnteredValue(YR)) dosumHowMuchPayments()" value="30" size="4" style="width: 60%">
+                        <span class="Calc_Text">Years </span>
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Interest Rate
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="IR" class="style9" onchange="if (MyCheckEnteredValuePercent(IR)) dosumHowMuchPayments()" value="4.0" size="4" style="width: 60%">
+                        <span class="Calc_Text">%</span>
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Loan Amount
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="LA" class="style9 pure-u-4-5" onchange="if (MyCheckEnteredValue(LA)) dosumHowMuchPayments()" value="100000" size="10">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Annual Real Estate Tax
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="AT" class="style9 pure-u-4-5" onchange="if (MyCheckEnteredValue(AT)) dosumHowMuchPayments()" value="1000" size="10">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Annual Insurance
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="AI" class="style9 pure-u-4-5" onchange="dosumHowMuchPayments()" value="300" size="10">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input name="BUTTON" type="button" class="Calc_Button" onclick="dosumHowMuchPayments()" value="Calculate">&nbsp;
+                    <input name="cmdReset" type="reset" class="Calc_Button" value="Reset">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1" style="margin-top: 20px; border-radius: 4px; background-color: #f3f3f3">
+                    <aside class="inner">
+                        <h1>Mortgage Calculation Results</h1>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                Monthly Principal + Interest
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="PI" class="style9 pure-u-4-5" size="10">
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                Monthly Tax
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="MT" class="style9 pure-u-4-5" size="10">
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                Monthly Ins
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="MI" class="style9 pure-u-4-5" size="10">
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                <strong>Total Monthly Payment</strong>
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="MP" class="style9 pure-u-4-5" size="10" />
+                            </aside>
+                        </aside>
+                        <section style="text-align: justify; margin-top: 10px">
+                            <span class="Calc_Text">DISCLAIMER: 
+                            The figures above are based upon conventional program guidelines. 
+                            Other loan programs are available. Calculations by this tool are believed to be accurate, 
+                            yet are not guaranteed. Further review is necessary to obtain an exact qualification. 
+                            If you have less than 20% equity in your home, a monthly mortgage insurance payment may be required.
+                            </span>
+                        </section>
+            </section>
+        </section>
+    </section>
+
+    </section>
+</section>

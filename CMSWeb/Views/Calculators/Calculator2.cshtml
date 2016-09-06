@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Calculator2";
+}
+    <section class="ui-widget-content calc pure-g-r" id="calcIncome" style="text-align: center;">
+        <section class="pure-u-1 left">
+            <section class="inner">
+                <section style="margin-bottom: 20px">
+                    <strong>See if Your Income is Sufficient to Qualify</strong>
+                </section>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Desired Mortgage for New Home
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="mortAmt" onchange="if (checkInput(this, 1, 10000000, 'Mortgage Amount')) dosumIncome()" size="10" class="pure-u-4-5" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Mortgage Term
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="numYears" onchange="if (checkInput(this, 1, 50, 'Number of Years')) dosumIncome()" size="4" style="width: 60%" />
+                        <span class="Calc_Text">Years</span>
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Interest Rate
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="mortRate" onchange="if (checkInput(this, 0, 99.99, 'Mortgage Rate')) dosumIncome()" size="4" style="width: 60%" />
+                        <span class="Calc_Text">%</span>
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Annual Real Estate Tax
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="propTax" onchange="if (checkInput(this, 0, 100000, 'Property Tax')) dosumIncome()" size="9" class="pure-u-4-5" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Total Monthly Payments in Non-Mortgage Debt (i.e. car, student loans, credit cards, etc).
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="debt" onchange="if (checkInput(this, 0, 1000000, 'Debt.')) dosumIncome()" size="10" class="pure-u-4-5" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input name="button" type="button" class="Calc_Button" onclick="dosumIncome()" value="Compute" />
+                        <input name="reset" type="reset" class="Calc_Button" value="Reset" />
+                    </aside>
+                </aside>
+                <aside style="margin-top: 20px; background-color: #f3f3f3; border-radius: 4px" class="center pure-u-1">
+                    <aside class="inner">
+                        <h1>Summary</h1>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                Monthly Principal + Interest
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="mortPay" class="style9 pure-u-4-5" onchange="dosumIncome()" size="10" />
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                Total Housing Payment (tax &amp; insurance included)
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="totalPay" class="style9 pure-u-4-5" onchange="dosumIncome()" size="10" />
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                Required Salary
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="reqdSal" class="style9 pure-u-4-5" onchange="dosumIncome()" size="10" />
+                            </aside>
+                        </aside>
+                        <p style="font-weight: bolder; margin-top: 20px">
+                            <strong>Your salary must meet the following two conditions:</strong>
+                        </p>
+                        <section style="text-align: justify">
+                            <ol>
+                                <li>Your gross (pre-taxes) monthly salary must be greater than 28% of the sum of the monthly mortgage and monthly tax payments.</li>
+                                <li>Your gross (pre-taxes) monthly salary must be greater than 36% of the sum of the monthly mortgage, monthly tax and other monthly debt payments.</li>
+                            </ol>
+                            DISCLAIMER: 
+                        The prequalification figures above are based upon conventional program guidelines. 
+                        Other loan programs are available. Calculations by this tool are believed to be accurate, 
+                        yet are not guaranteed. Further review is necessary to obtain an exact qualification. 
+                        If you have less than 20% equity in your home, a monthly mortgage insurance payment may be required.
+                        </section>
+            </section>
+        </section>
+    </section>

@@ -1,0 +1,222 @@
+﻿@{
+    ViewBag.Title = "Calculator7";
+}
+    <section class="ui-widget-content calc pure-g-r" id="calcHowMuchDownPayment" style="text-align: center;">
+        <section class="pure-u-1 left">
+            <section class="inner">
+                <h1>Loan Information</h1>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Sales Price of Home
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input name="home" class="style9 pure-u-4-5" onchange=" MyCheckEnteredValue(document.all.home)" size="10">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Down Payment Percentage
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input onchange=" MyCheckEnteredValue(document.all.dp_percent)" class="style9" style="width: 60%" size="4" name="dp_percent">
+                        %
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Estimated Interest Rate
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input onchange=" MyCheckEnteredValue(document.all.rate)" size="4" class="style9" style="width: 60%" name="rate">
+                        %
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Discount Points Paid at Closing
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input onchange=" MyCheckEnteredValue(document.all.close_points)" class="style9" style="width: 60%" size="4" name="close_points">
+                        %
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Mortgage Term
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <select id="term" size="1" name="term" class="style9 pure-u-4-5">
+                            <option value="30" selected>30 year</option>
+                            <option value="25">25 year</option>
+                            <option value="20">20 year</option>
+                            <option value="15">15 year</option>
+                        </select>
+                    </aside>
+                </aside>
+                <h1>Additonal Expenses</h1>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Estimated Annual Property Taxes
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" name="tax" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Estimated Annual Homeowners Insurance
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input onchange=" MyCheckEnteredValue(document.all.insurance)" class="style9 pure-u-4-5" size="10" name="insurance">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input onclick="dosumHowMuchDownPayment();" type="button" value="Calculate" name="button" class="Calc_Button">
+                    </aside>
+                </aside>
+                <h1>Mortgage Results</h1>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Mortgage Amount
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" name="mortgage" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Down Payment Amount
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" value="0" name="dp_amount" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Discount Points
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" value="0" name="points" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Closing Costs
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" value="0" name="close_cost" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Prepaids
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" value="0" name="prepaids" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Total Cash
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" name="totalCash" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <h1>Monthly Payments</h1>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Monthly Principal &amp; Interest Payment
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" name="mo_pmt" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Estimated Monthly Property Tax Payment
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" name="mo_tax" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Estimated Monthly Insurance Payment
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" name="mo_ins" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Total Estimated Monthly Payment
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="10" name="totPmt" class="style9 pure-u-4-5">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Estimated APR
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input size="4" name="apr" class="style9" style="width: 60%">
+                        %
+                    </aside>
+                </aside>
+                <section class="pure-u-1" style="margin-top: 20px; border-radius: 4px; background-color: #f3f3f3">
+                    <section class="inner">
+                        <section style="text-align: justify">
+                            <strong>DISCLAIMER:</strong>
+                            The prequalification figures above are based upon conventional program guidelines. 
+                        Other loan programs are available. Calculations by this tool are believed to be accurate, 
+                        yet are not guaranteed. Further review is necessary to obtain an exact qualification. 
+                        If you have less than 20% equity in your home, a monthly mortgage insurance payment may be required. 
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>

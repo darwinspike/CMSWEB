@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "Calculator5";
+}
+    <section class="ui-widget-content calc pure-g-r" id="calcHowMuchBorrow" style="text-align: center;">
+        <section class="pure-u-1 left">
+            <section class="inner">
+                <section style="display: block; border-radius: 4px; background-color: #f3f3f3; padding: 20px; margin-bottom: 20px">
+                    Use the following calculator to determine the maximum monthly payment principle plus interest 
+                (P+I) and the maximum loan amount for which you may qualify.
+                </section>
+                <h2>Monthly Income</h2>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Salary/Wages
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="income" class="style9 pure-u-4-5" id="income" onchange="MyCheckEnteredValue(this)" size="10">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Other Income
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="other" class="style9 pure-u-4-5" id="other" onchange="MyCheckEnteredValue(this)" size="10">
+                    </aside>
+                </aside>
+                <h2>Monthly Housing Expenses</h2>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Condo/Maintenance Fee
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="CondoMaintenanceFee" class="style9 pure-u-4-5" id="CondoMaintenanceFee" onchange="MyCheckEnteredValue(this)" size="10" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Property Taxes
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="taxes" class="style9 pure-u-4-5" id="Text1" onchange="MyCheckEnteredValue(this)" size="10" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Hazard Insurance
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="insurance" class="style9 pure-u-4-5" id="insurance" onchange="MyCheckEnteredValue(this)" size="10">
+                    </aside>
+                </aside>
+                <h2>Other Monthly Expenses</h2>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Auto Payment
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="auto" class="style9 pure-u-4-5" id="auto" onchange="MyCheckEnteredValue(this)" size="10" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Credit Cards and Other Payments
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="cards" class="style9 pure-u-4-5" id="cards" onchange="MyCheckEnteredValue(this)" size="10" />
+                    </aside>
+                </aside>
+                <h2>Loan Term and Interest Rate</h2>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Loan Term
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="term" class="style9" onchange="MyCheckEnteredValue(this)" style="width: 60%" size="4" />
+                        Years
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                        Interest Rate
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input id="rate" class="style9" onchange="MyCheckEnteredValue(this)" size="4" style="width: 60%" />
+                        %
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone right">
+                    <aside class="inner">
+                    </aside>
+                </aside>
+                <aside class="pure-u-1-2 center-phone left">
+                    <aside class="inner">
+                        <input name="submit" type="button" class="Calc_Button" onclick="dosumHowMuchBorrow();" value="Submit" />&nbsp;
+                    <input name="reset" type="reset" class="Calc_Button" value="Reset" />
+                    </aside>
+                </aside>
+                <aside class="pure-u-1" style="border-radius: 4px; background-color: #f3f3f3; margin-top: 20px">
+                    <aside class="inner">
+                        <h1>Results</h1>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                You may qualify for a maximum monthly mortgage payment (P+I) of
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="payment" class="style9 pure-u-4-5" size="10" />
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone right">
+                            <aside class="inner">
+                                You may qualify for a maximum loan amount of
+                            </aside>
+                        </aside>
+                        <aside class="pure-u-1-2 center-phone left">
+                            <aside class="inner">
+                                <input id="amount" class="style9 pure-u-4-5" size="7" />
+                            </aside>
+                        </aside>
+                        <section style="text-align: justify; margin-top: 10px">
+                            <strong>DISCLAIMER:</strong>
+                            The figures above are based upon conventional program guidelines. 
+                        Other loan programs are available. Calculations by this tool are believed to be accurate, 
+                        yet are not guaranteed. Further review is necessary to obtain an exact qualification. 
+                        If you have less than 20% equity in your home, a monthly mortgage insurance payment may be required.
+                        </section>
+            </section>
+        </section>
+    </section>
+
+    </section>
+</section>

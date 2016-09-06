@@ -1,0 +1,197 @@
+﻿@{
+    ViewBag.Title = "Calculator8";
+}
+    <section class="ui-widget-content calc pure-g-r" id="calcCompare" style="text-align: center;">
+        <section class="pure-u-1 left">
+            <section class="inner">
+                <section style="display: block; border-radius: 4px; background-color: #f3f3f3; padding: 20px; margin-bottom: 20px">
+                    This calculator will allow you to compute up to three loans and compare the results.
+                </section>
+                <h1>Loan #1</h1>
+                <section id="f">
+                    <section class="pure-u-1-2 center-phone right">
+                        <section class="inner">
+                            Mortgage Term
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone left">
+                        <section class="inner">
+                            <select id="term" class="pure-u-4-5">
+                                <option value="" selected></option>
+                                <option value="15">15</option>
+                                <option value="30">30</option>
+                            </select>
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone right">
+                        <section class="inner">
+                            Interest Rate
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone left">
+                        <section class="inner">
+                            <input name="interest" class="style9" style="width: 60%" id="interest" size="4">
+                            %
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone right">
+                        <section class="inner">
+                            Loan Amount
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone left">
+                        <section class="inner">
+                            <input name="principal" class="style9 pure-u-4-5" id="principal" size="10">
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone right">
+                        <section class="inner">
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone left">
+                        <section class="inner">
+                            <input name="button" type="button" class="Calc_Button" onclick="computeForm($('#f'))" value="Compute">
+                            <input name="reset" type="reset" class="Calc_Button" value="Reset">
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone right">
+                        <section class="inner">
+                            Monthly Payment for Loan #1
+                        </section>
+                    </section>
+                    <section class="pure-u-1-2 center-phone left">
+                        <section class="inner">
+                            <input name="payment" class="style9 pure-u-4-5" id="payment" onchange="computeField(this)" size="10">
+                        </section>
+                    </section>
+                </section>
+                <h1>Loan #2</h1>
+                <section id="b">
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Mortgage Term
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <select id="Select1" class="pure-u-4-5">
+                                <option value="" selected></option>
+                                <option value="15">15</option>
+                                <option value="30">30</option>
+                            </select>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Interest Rate
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="interest" class="style9" id="Text1" size="4" style="width: 60%">
+                            %
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Loan Amount
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="principal" class="style9 pure-u-4-5" id="Text2" size="10">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="button" type="button" class="Calc_Button" onclick="computeForm($('#b'))" value="Compute">
+                            <input name="reset" type="reset" class="Calc_Button" value="Reset">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Monthly Payment for Loan #2
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="payment" class="style9 pure-u-4-5" id="Text3" onchange="computeField(this)" size="10">
+                        </aside>
+                    </aside>
+                </section>
+                <h1>Loan #3</h1>
+                <section id="l">
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Mortgage Term
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <select id="Select2" class="pure-u-4-5">
+                                <option value="" selected></option>
+                                <option value="15">15</option>
+                                <option value="30">30</option>
+                            </select>
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Interest Rate
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="interest" class="style9" id="Text4" size="4" style="width: 60%">
+                            %
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Loan Amount
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="principal" class="style9 pure-u-4-5" id="Text5" size="10">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="button" type="button" class="Calc_Button" onclick="computeForm($('#l'))" value="Compute">
+                            <input name="reset" type="reset" class="Calc_Button" value="Reset">
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone right">
+                        <aside class="inner">
+                            Monthly Payment for Loan #3
+                        </aside>
+                    </aside>
+                    <aside class="pure-u-1-2 center-phone left">
+                        <aside class="inner">
+                            <input name="payment" class="style9 pure-u-4-5" id="Text6" onchange="computeField(this)" size="10">
+                        </aside>
+                    </aside>
+                </section>
+                <section class="pure-u-1" style="border-radius: 4px; margin-top: 10px; background-color: #f3f3f3">
+                    <section class="inner">
+                        <section align="justify">
+                            <strong>DISCLAIMER:</strong>
+                            The figures above are based upon conventional program guidelines. 
+                        Other loan programs are available. Calculations by this tool are believed to be accurate, 
+                        yet are not guaranteed. Further review is necessary to obtain an exact qualification. 
+                        If you have less than 20% equity in your home, a monthly mortgage insurance payment may be required. 
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>

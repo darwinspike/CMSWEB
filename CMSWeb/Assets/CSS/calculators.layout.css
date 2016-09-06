@@ -1,0 +1,323 @@
+*[rel="calculator"],*[rel="calculator"] *,.calc_body{
+	font: 14px Helvetica;
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #969696;
+}
+
+*[rel="calculator"] .list-icon{
+	float: left;
+	width: 20px;
+	height: 33px;
+	margin-left: 20px;
+	margin-right: -24px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYzNkFCQ0ZBMTBCRTExRTM5NDk4RDFEM0E5RkQ1NEZCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYzNkFCQ0ZCMTBCRTExRTM5NDk4RDFEM0E5RkQ1NEZCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjM2QUJDRjgxMEJFMTFFMzk0OThEMUQzQTlGRDU0RkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjM2QUJDRjkxMEJFMTFFMzk0OThEMUQzQTlGRDU0RkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7h1bLqAAAAWUlEQVR42mL8////BwYGBn4GCACxBRlIAIxAA/4jaXoPEkMyjJ+A/g9MDJQBRhYg8RFqMwg8RJIUINYLFDmBUi+ADQAF1n8ofk9yIAy6WPg4GgtDMRYAAgwAdLYwLAoIwPgAAAAASUVORK5CYII=) center center no-repeat;
+}
+
+
+
+.calc_body input[type="text"], .calc_body input[type="email"],.calc_body textarea, input {
+display: inline-block;
+vertical-align: top;
+padding: 0 8px;
+height: 30px;
+line-height: 19px;
+color: #626262;
+background: #FFF;
+border: 2px solid #D9D9D9;
+border-radius: 2px;
+}
+
+.calc_body input[type=text]:focus, .calc_body input[type=email]:focus, .calc_body textarea:focus, .calc_body input:focus {
+color: #3C3C3C;
+background: #FFF;
+border-color: #3FB6F2;
+outline: none;
+}
+
+
+*[rel="calculator"] input[type="button"],*[rel="calculator"] input[type="submit"], *[rel="calculator"] button,*[rel="calculator"] .calc_button, input[type="button"], input[type="reset"],input[type="submit"], button,.calc_button {
+display: inline;
+vertical-align: top;
+height: 33px;
+line-height: 20px;
+padding: 7px 16px;
+font-size: 13px;
+text-align: center;
+color: #FFF;
+text-shadow: 0 1px rgba(0, 0, 0, 0.08);
+background: #6facff;
+border: 0;
+border-radius: 2px;
+cursor: pointer;
+}
+
+*[rel="calculator"] input[type="button"]:hover,*[rel="calculator"] input[type="submit"]:hover, *[rel="calculator"] button:hover,*[rel="calculator"] .calc_button:hover,*[rel="calculator"] .calc_button.active, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, button:hover, .calc_button:hover,*[rel="calculator"] input[type="button"]:hover,*[rel="calculator"] input[type="submit"]:focus, *[rel="calculator"] button:focus,*[rel="calculator"] .calc_button:focus,*[rel="calculator"] .calc_button.active, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:focus, .calc_button:focus,*[rel="calculator"] input[type="submit"]:focus, *[rel="calculator"] button:focus,*[rel="calculator"] .calc_button:focus,*[rel="calculator"] .calc_button.active, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:focus, .calc_button:focus{
+	background-color: #4e92ef;
+	color: #fff;
+}
+
+*[rel="calculator"] a {
+color: #98B0C9;
+text-decoration: none;
+}
+
+*[rel="calculator"] .calc_head{
+	padding: 12px 15px;
+	box-shadow: 0px 3px 2px -2px #CFCFCF;
+	border-radius: 2px;
+	background: #fdfdfd;
+	text-align: center;
+	font-weight: bolder;
+	min-height: 20px;
+	border-bottom: 1px solid transparent;
+	z-index: 2;
+	position: relative;
+	/*overflow: hidden;*/
+}
+
+*[rel="calculator"]:hover .calc_head{
+	box-shadow: 0px 3px 2px -2px #B1ADAD;
+	border-bottom: 1px solid #f7f7f7;
+}
+
+*[rel="calculator"] .right{
+	float: right;
+}
+
+*[rel="calculator"] .clearfix{
+	display: block;
+	clear: both;
+}
+
+*[rel="calculator"] .menu_calc{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+*[rel="calculator"] .menu_calc a{
+	margin: 0px auto 0px auto;
+	display: block;
+	width: 200px;
+	padding: 0px;
+	height: 33px;
+	line-height: 33px;
+	border-radius: 0px 0px 2px 2px;
+	color: #FFF;
+	background-color: #C3C8D1;
+}
+
+
+*[rel="calculator"] .calculators_menu{
+	display: block;
+	position: relative;
+	background-color: #e9eaea;
+	border-radius: 0px 0px 2px 2px;
+	margin: 0px 0px;
+	display: none;
+}
+
+
+*[rel="calculator"] .calculators_menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+*[rel="calculator"] .spacer{
+	padding: 10px;
+}
+
+*[rel="calculator"] .calculators_menu ul li{
+	width: 25%;
+	display: block;
+	float: left;
+}
+
+*[rel="calculator"] .calculators_menu ul li a{
+	display: block;
+	min-height: 90px;
+	padding: 10px;
+	text-align: center;
+	background-color: #f7f7f7;
+	border: 3px solid #C4D5D5;
+	border-radius: 2px;
+	margin: 0px 3px 3px 0px;
+	color: #bac8c8;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+*[rel="calculator"] .calculators_menu ul li:hover a{
+	border: 3px solid #abbcbc;
+	background-color: #ebeef2;
+	color: #A0A2A5;
+}
+
+*[rel="calculator"] .calculators_menu ul li a.active{
+	border: 3px solid #abbcbc;
+	background-color: #c6d2d2;
+	color: #fff;
+}
+
+.calcs_title{
+font: 22px Helvetica;
+background-color: #CACCE4;
+display: block;
+padding: 10px;
+color: #FFF;
+text-shadow: 0px 1px 0px #96B3C4;
+border-radius: 2px;
+}
+
+*[rel="calculator"] .calc_lo{
+	background-color: #FAFAFA;
+	padding: 10px;
+	border-bottom: 2px solid #E7E8F3;
+}
+
+*[rel="calculator"] .calc_lo .calc_lo_pic{
+	background-color: #B9BFC9;
+	height: 150px;
+	border: 1px solid #CACCE4;
+	border-radius: 3px;
+	float: left;
+	width: 20%;
+	max-width: 150px;
+}
+
+*[rel="calculator"] .calc_lo .calc_lo_info{
+	float: left;
+	width: 80%;
+}
+
+*[rel="calculator"] .calc_lo .calc_lo_info>*{
+	padding-left: 10px;
+}
+
+*[rel="calculator"] .calc_lo .calc_lo_info strong,*[rel="calculator"] .calc_lo .calc_lo_info a{
+	display: inline;
+	font-weight: bolder;
+}
+
+
+*[rel="calculator"] .calc_lo .calc_lo_info h1{
+	font-size: 25px;
+	line-height: 25px;
+	color: #6996C2;
+	margin: 0px;
+}
+
+*[rel="calculator"] .calc_lo .calc_lo_info h2{
+	font-size: 18px;
+	line-height: 18px;
+	border-bottom: 2px solid #EEE;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+*[rel="calculator"] .calc_lo .calc_lo_info .calc_lo_address{
+	min-height: 60px;
+	display: block;
+	clear: both;
+	margin-bottom: 5px;
+	font-style: italic;
+}
+
+*[rel="calculator"] .calc_lo.fixed{
+	position: absolute;
+	z-index: 999;
+	top: 5%;
+	left: 0px;
+	width: 100%;
+	padding:10px 0px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	box-shadow: 0px 0px 4px #89A1C5;
+	border-bottom: none;
+}
+
+*[rel="calculator"] .calc_lo.fixed .calc_lo_pic{
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+}
+
+*[rel="calculator"] .calc_lo.fixed h2{
+	float:left;
+	border-bottom: none;
+}
+
+*[rel="calculator"] .calc_lo.fixed a{
+	float: right;
+	line-height: 33px;
+	padding: 7px 25px;
+}
+
+*[rel="calculator"] .calc_lo.fixed .calc_lo_info{
+	width: 90%;
+}
+
+
+
+
+
+/*tablet*/
+@media (min-width:768px) and (max-width:979px){
+	*[rel="calculator"] .calculators_menu ul li{
+		width: 33.33%;
+	}
+
+	*[rel="calculator"] .calc_lo .calc_lo_info{
+		width: 80%;
+		margin-right:-10px;
+	}
+
+	*[rel="calculator"] .calc_lo.fixed .calc_lo_info{
+		width: 85%;
+	}
+}
+
+/*phone*/
+@media (max-width:767px){
+	*[rel="calculator"] .calculators_menu ul li{
+		width: 100%;
+	}
+	*[rel="calculator"] .calculators_menu ul li a{
+		min-height: 0px;
+	}
+
+	*[rel="calculator"] .calc_lo .calc_lo_info a{
+		display: block;
+		line-height: 33px;
+		margin-bottom: 10px;
+	}
+
+	*[rel="calculator"] .calc_lo .calc_lo_pic{
+		height: 100px;
+		width: 30%;
+	}
+	*[rel="calculator"] .calc_lo .calc_lo_info{
+		width: 70%;
+		margin-right: -20px;
+	}
+
+	*[rel="calculator"] .calc_lo .calc_lo_info .calc_lo_address{
+		display: none;
+	}
+
+	*[rel="calculator"] .calc_lo .calc_lo_info .calc_map_finder{
+		display: none;
+	}
+
+	*[rel="calculator"] .calc_lo.fixed .calc_lo_info{
+		width: 80%;
+	}
+}
+
+.ui-widget-content{
+	border: none;
+}

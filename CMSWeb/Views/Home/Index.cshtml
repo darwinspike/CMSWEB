@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script type="text/javascript" language="javascript" src="Assets/JS/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" language="javascript" src="Assets/JS/jquery-ui-1.10.min.js"></script>
+
+</head>
+<body>
+    <div>
+@*        @{       
+        Html.RenderPartial("~/Template/Master/responsive_template04/Header.ascx");
+        Html.RenderPartial("~/Template/Master/responsive_template04/HomePage.ascx"); 
+        Html.RenderPartial("~/Template/Master/responsive_template04/Footer.ascx"); }*@
+
+        @{ 
+            if((bool)ViewBag.nowrap) {
+                Html.RenderPartial((string)@ViewBag.UrlHomePage);
+            }else{                
+                Html.RenderPartial((string)@ViewBag.UrlHeader);
+                Html.RenderPartial((string)@ViewBag.UrlHomePage);
+                Html.RenderPartial((string)@ViewBag.UrlFooter); 
+            }
+       }
+
+
+    </div>
+</body>
+</html>
